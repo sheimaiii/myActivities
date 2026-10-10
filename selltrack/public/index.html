@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SellTrack | Sales & Inventory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginView" class="login-wrap">
+    <form id="loginForm" class="login-card">
+      <div class="brand">SELL<span>TRACK</span></div>
+      <p class="muted">Sales, Inventory & POS Management</p>
+      <label>Username<input id="username" required autocomplete="username"></label>
+      <label>Password<input id="password" type="password" required autocomplete="current-password"></label>
+      <button class="btn primary full">Sign in</button>
+      <p id="loginMsg" class="error"></p>
+    </form>
+  </div>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand">SELL<span>TRACK</span></div>
+      <div id="userBox" class="user-box"></div>
+      <nav id="nav">
+        <button data-page="dashboard">⌂ Dashboard</button>
+        <button data-page="pos">▣ POS / Cashier</button>
+        <button data-page="products">▤ Products</button>
+        <button data-page="inventory">◈ Inventory</button>
+        <button data-page="sales">₱ Sales</button>
+        <button data-page="reports">▥ Reports</button>
+        <button data-page="users">♙ Users</button>
+      </nav>
+      <button id="logout" class="logout">Sign out</button>
+    </aside>
+    <main class="main">
+      <header class="topbar"><h1 id="pageTitle">Dashboard</h1><span id="clock"></span></header>
+      <section id="content"></section>
+    </main>
+  </div>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
